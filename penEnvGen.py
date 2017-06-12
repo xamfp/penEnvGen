@@ -21,6 +21,8 @@ class PenEnvGen:
             self.subdomain_search(self.TARGET)
             self.generate_Sub_workspace(self.TARGET)
             self.nmap_subdomains()
+        except IndexError:
+            print "[i] Usage: ./penEnvGen.py localhost.local"
         except KeyboardInterrupt:
             os._exit(1)
 
